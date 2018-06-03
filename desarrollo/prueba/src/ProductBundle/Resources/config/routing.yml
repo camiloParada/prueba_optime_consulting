@@ -1,0 +1,32 @@
+product_homepage:
+    path:     /
+    defaults: { _controller: ProductBundle:Default:index }
+
+product_index:
+    path: /product/index
+    defaults: { _controller: ProductBundle:Product:index }
+
+product_create:
+    path: /product/create
+    defaults: { _controller: ProductBundle:Product:create }
+    methods: POST
+
+product_edit:
+    path: /product/edit/{id}
+    defaults: { _controller: ProductBundle:Product:edit }
+
+product_update:
+    path: /product/update/{id}
+    defaults: { _controller: ProductBundle:Product:update }
+    methods: [POST, PUT]
+
+product_delete:
+    path: /product/delete/{id}
+    defaults: { _controller: ProductBundle:Product:delete }
+
+product_redirect:
+    path: /product/create
+    defaults: 
+      _controller: ProductBundle:Product:index
+      path: /product/index
+      permanent: true

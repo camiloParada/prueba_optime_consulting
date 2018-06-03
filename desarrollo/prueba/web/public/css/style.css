@@ -1,0 +1,98 @@
+/* global */
+
+h2{
+	text-transform: uppercase;
+	text-align: center;
+	margin: 35px 0;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+
+/* form create */
+
+div.alert{
+	text-align: center;
+}
+
+span.text-danger{
+	text-align: center;
+}
+
+/* table products */
+
+table tr td:nth-child(4){
+	text-transform: capitalize;
+}
+
+@media only screen and (min-width: 992px)
+{
+	form fieldset{
+		margin: 0 auto;
+		width: 500px;
+	}
+
+	form label{
+		width: 120px;
+		vertical-align: top;
+	}
+
+	form input.form-control,
+	form textarea.form-control{
+		width: 300px;
+		display: inline-block;
+	}
+
+	form textarea.form-control{
+		resize: none;
+	}
+
+	form p{
+		text-align: center;
+	}
+
+	/* table products */
+
+	table tr th:nth-child(1){
+		width:5%;
+	}
+
+	table tr th:nth-child(2){
+		width:20%;
+	}
+
+	table tr th:nth-child(3){
+		width:35%;
+	}
+
+	table tr th:nth-child(4){
+		width:10%;
+	}
+
+	table tr th:nth-child(5){
+		width:10%;
+	}
+
+	table tr th:nth-child(6){
+		width:5%;
+	}
+
+	table tr th:nth-child(7){
+		width:15%;
+		text-align: center;
+	}
+
+	table tr td:nth-child(7){
+		text-align: center;
+	}
+}
+
+
+
+

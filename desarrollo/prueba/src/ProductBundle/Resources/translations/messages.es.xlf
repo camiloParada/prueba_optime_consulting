@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="file.ext">
+		<body>
+			<trans-unit id="1">
+				<source>New Product</source>
+				<target>Nuevo Producto</target>
+			</trans-unit>
+			<trans-unit id="2">
+				<source>Code</source>
+				<target>Código</target>
+			</trans-unit>
+			<trans-unit id="3">
+				<source>Name</source>
+				<target>Nombre</target>
+			</trans-unit>
+			<trans-unit id="4">
+				<source>Description</source>
+				<target>Descripción</target>
+			</trans-unit>
+			<trans-unit id="5">
+				<source>Brand</source>
+				<target>Marca</target>
+			</trans-unit>
+			<trans-unit id="6">
+				<source>Category</source>
+				<target>Categoría</target>
+			</trans-unit>
+			<trans-unit id="7">
+				<source>Price</source>
+				<target>Precio</target>
+			</trans-unit>
+			<trans-unit id="8">
+				<source>Save</source>
+				<target>Guardar</target>
+			</trans-unit>
+			<trans-unit id="9">
+				<source>Product list</source>
+				<target>Lista de Productos</target>
+			</trans-unit>
+			<trans-unit id="10">
+				<source>Actions</source>
+				<target>Acciones</target>
+			</trans-unit>
+			<trans-unit id="11">
+				<source>Edit</source>
+				<target>Editar</target>
+			</trans-unit>
+			<trans-unit id="12">
+				<source>Delete</source>
+				<target>Borrar</target>
+			</trans-unit>
+			<trans-unit id="13">
+				<source>The product has been created.</source>
+				<target>El producto ha sido creado</target>
+			</trans-unit>
+			<trans-unit id="14">
+				<source>The product has been modified.</source>
+				<target>El producto ha sido modificado</target>
+			</trans-unit>
+			<trans-unit id="15">
+				<source>The product has been deleted.</source>
+				<target>El producto ha sido eliminado</target>
+			</trans-unit>
+			<trans-unit id="16">
+				<source>Product not found.</source>
+				<target>Producto no encontrado</target>
+			</trans-unit>
+			<trans-unit id="17">
+				<source>Are you sure?</source>
+				<target>¿Estás seguro?</target>
+			</trans-unit>
+			<trans-unit id="18">
+				<source>Cancel</source>
+				<target>Cancelar</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

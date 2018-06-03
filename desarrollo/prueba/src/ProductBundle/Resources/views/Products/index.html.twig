@@ -1,0 +1,90 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+	{{ include('@Product/Products/messages/success.html.twig') }}
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2>{% trans %}New Product{% endtrans %}</h2>
+
+				{{ form_start(form, {'attr' : {'novalidate' : 'novalidate', 'role' : 'form'} }) }}
+				<h4 class="text-danger">{{ form_errors(form) }}</h4>
+				
+				<fieldset>
+					<div class="form-group">
+						{{ form_label(form.code) }}
+						{{ form_widget(form.code, {'attr' : {'class' : 'form-control'} }) }}
+						<span class="text-danger">{{ form_errors(form.code) }}</span>
+					</div>
+					<div class="form-group">
+						{{ form_label(form.name) }}
+						{{ form_widget(form.name, {'attr' : {'class' : 'form-control'} }) }}
+						<span class="text-danger">{{ form_errors(form.name) }}</span>
+					</div>				
+					<div class="form-group">
+						{{ form_label(form.description) }}
+						{{ form_widget(form.description, {'attr' : {'class' : 'form-control'} }) }}
+						<span class="text-danger">{{ form_errors(form.description) }}</span>
+					</div>				
+					<div class="form-group">
+						{{ form_label(form.brand) }}
+						{{ form_widget(form.brand, {'attr' : {'class' : 'form-control'} }) }}
+						<span class="text-danger">{{ form_errors(form.brand) }}</span>
+					</div>				
+					<div class="form-group">
+						{{ form_label(form.category) }}
+						{{ form_widget(form.category, {'attr' : {'class' : 'form-control'} }) }}
+						<span class="text-danger">{{ form_errors(form.category) }}</span>
+					</div>				
+					<div class="form-group">
+						{{ form_label(form.price) }}
+						{{ form_widget(form.price, {'attr' : {'class' : 'form-control', 'min' : '0' } }) }}
+						<span class="text-danger">{{ form_errors(form.price) }}</span>
+					</div>				
+				</fieldset>
+
+				<p>
+					{{ form_widget(form.save, {'label' : 'Save', 'attr' : {'class' : 'btn btn-success'} }) }}
+				</p>
+
+				{{ form_end(form) }}
+			</div><!-- .col-sm-12 -->
+
+			<div class="col-sm-12">
+				<h2>{% trans %}Product list{% endtrans %}</h2>
+				Total: {{ pagination.getTotalItemCount }}
+				<table class="table table-responsive table-striped table-hover">
+					<tr>
+						<th>{{ knp_pagination_sortable(pagination, 'Code'|trans, 'p.code') }}</th>		
+						<th>{{ knp_pagination_sortable(pagination, 'Name'|trans, 'p.name') }}</th>	
+						<th>{{ knp_pagination_sortable(pagination, 'Description'|trans, 'p.description') }}</th>	
+						<th>{{ knp_pagination_sortable(pagination, 'Brand'|trans, 'p.brand') }}</th>	
+						<th>{{ knp_pagination_sortable(pagination, 'Category'|trans, 'p.category') }}</th>	
+						<th>{{ knp_pagination_sortable(pagination, 'Price'|trans, 'p.price') }}</th>						
+						<th>{% trans %}Actions{% endtrans %}</th>
+					</tr>
+					{% for product in pagination %}
+						<tr>
+							<td>{{ product.code }}</td>
+							<td>{{ product.name }}</td>
+							<td>{{ product.description }}</td>
+							<td>{{ product.brand }}</td>
+							<td>{{ product.category }}</td>
+							<td>${{ product.price }}</td>
+							<td>
+								<a href="{{ path('product_edit', { id: product.id }) }}" class="btn btn-sm btn-primary">{% trans %}Edit{% endtrans %}</a>
+								<a id="deleteBtn" href="{{ path('product_delete', { id: product.id }) }}" class="btn btn-sm btn-danger" data-message="{% trans %}Are you sure?{% endtrans %}">{% trans %}Delete{% endtrans %}</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</table>
+				{# display navigation #}
+				<div class="navigation">
+					{{ knp_pagination_render(pagination) }}
+				</div>
+			</div><!-- .col-sm-12 -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+
+{% endblock %}

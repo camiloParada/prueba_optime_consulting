@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="file.ext">
+		<body>
+			<trans-unit id="1">
+				<source>product.code.not_blank</source>
+				<target>El campo código es requerido.</target>
+			</trans-unit>
+			<trans-unit id="2">
+				<source>product.name.not_blank</source>
+				<target>El campo nombre es requerido.</target>
+			</trans-unit>
+			<trans-unit id="3">
+				<source>product.description.not_blank</source>
+				<target>El campo descripción es requerido.</target>
+			</trans-unit>
+			<trans-unit id="4">
+				<source>product.brand.not_blank</source>
+				<target>El campo marca es requerido.</target>
+			</trans-unit>
+			<trans-unit id="5">
+				<source>product.category.not_blank</source>
+				<target>El campo categoría es requerido.</target>
+			</trans-unit>
+			<trans-unit id="6">
+				<source>product.price.not_blank</source>
+				<target>El campo precio es requerido.</target>
+			</trans-unit>
+			<trans-unit id="7">
+				<source>product.code.min_length{{ limit }}</source>
+				<target>El código debe contener mínimo {{ limit }} caracteres</target>
+			</trans-unit>
+			<trans-unit id="8">
+				<source>product.code.max_length{{ limit }}</source>
+				<target>El código debe contener máximo {{ limit }} caracteres</target>
+			</trans-unit>
+			<trans-unit id="9">
+				<source>product.code.regex</source>
+				<target>El código no puede contener caracteres especiales o espacios</target>
+			</trans-unit>
+			<trans-unit id="10">
+				<source>product.name.min_length{{ limit }}</source>
+				<target>El nombre debe contener mínimo {{ limit }} caracteres.</target>
+			</trans-unit>
+			<trans-unit id="11">
+				<source>product.price.min_valid</source>
+				<target>El valor no puede ser menor que cero.</target>
+			</trans-unit>
+			<trans-unit id="12">
+				<source>product.price.max_valid</source>
+				<target>El valor excede el máximo permitido para un producto.</target>
+			</trans-unit>
+			<trans-unit id="13">
+				<source>product.price.valid</source>
+				<target>Ingrese un valor válido.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
